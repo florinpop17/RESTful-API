@@ -30,6 +30,15 @@ app.get('/api/books', function(req, res) {
     });
 });
 
+app.get('/api/books/:_id', function(req, res) {
+    var id = req.params._id;
+    
+    Book.getBookById(id, function(err, book){
+        if(err) { throw err; }
+        res.json(book);
+    });
+});
+
 app.listen(port, function(){
     console.log('Server running on port ' + port);
 });
