@@ -1,0 +1,19 @@
+{
+  "name": "restful-api",
+  "version": "1.0.0",
+  "description": "Simple bookstore API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florinpop17/RESTful-API.git"
+  },
+  "author": "Florin Pop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/florinpop17/RESTful-API/issues"
+  },
+  "homepage": "https://github.com/florinpop17/RESTful-API#readme"
+}
