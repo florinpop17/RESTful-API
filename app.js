@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 
 var port = 3000;
 
+var Genre = require('./models/genre');
+
 // Connect to mongoose
 mongoose.connect('mongodb://localhost/bookstore');
 var db = mongoose.connection;
