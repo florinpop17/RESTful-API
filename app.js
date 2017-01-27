@@ -88,6 +88,15 @@ app.put('/api/books/:_id', function(req, res) {
     });
 });
 
+app.delete('/api/books/:_id', function(req, res) {
+    var id = req.params._id;
+    
+    Book.removeBook(id, function(err, book){
+        if(err) { throw err; }
+        res.json(book);
+    });
+});
+
 app.listen(port, function(){
     console.log('Server running on port ' + port);
 });
