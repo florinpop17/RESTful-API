@@ -24,7 +24,7 @@ app.get('/api/genres', function(req, res) {
 });
 
 app.get('/api/books', function(req, res) {
-    Book.getBooks(function(err, genres){
+    Book.getBooks(function(err, books){
         if(err) { throw err; }
         res.json(books);
     });
