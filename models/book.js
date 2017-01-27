@@ -38,6 +38,6 @@ var bookSchema = mongoose.Schema({
 var Book = module.exports = mongoose.model('Book', genreSchema);
 
 // Get Genres
-module.exports.getGenres = function(callback, limit) {
-    Genre.find(callback).limit(limit);
+module.exports.getBooks = function(callback, limit) {
+    Book.find(callback).limit(limit);
 }
