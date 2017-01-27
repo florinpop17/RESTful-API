@@ -23,6 +23,15 @@ app.get('/api/genres', function(req, res) {
     });
 });
 
+app.post('/api/genres', function(req, res) {
+    var genre = req.body;
+    
+    Genre.addGenre(genre, function(err, genre){
+        if(err) { throw err; }
+        res.json(genre);
+    });
+});
+
 app.get('/api/books', function(req, res) {
     Book.getBooks(function(err, books){
         if(err) { throw err; }
