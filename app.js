@@ -34,8 +34,8 @@ app.post('/api/genres', function(req, res) {
     });
 });
 
-app.post('/api/genres/:_id', function(req, res) {
-    var id = request.params._id;
+app.put('/api/genres/:_id', function(req, res) {
+    var id = req.params._id;
     var genre = req.body;
     
     Genre.updateGenre(id, genre, {},function(err, genre){
@@ -64,6 +64,16 @@ app.get('/api/books/:_id', function(req, res) {
     var id = req.params._id;
     
     Book.getBookById(id, function(err, book){
+        if(err) { throw err; }
+        res.json(book);
+    });
+});
+
+app.put('/api/books/:_id', function(req, res) {
+    var id = req.params._id;
+    var book = req.body;
+    
+    Book.updateBook(id, book, {},function(err, book){
         if(err) { throw err; }
         res.json(book);
     });
